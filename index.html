@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solmie Performance Binder</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      type="module"
+      src="./assets/vendor/model-viewer.min.js"
+    ></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="product-stage" aria-label="Solmie 束胸商品預覽">
+        <div class="stage-copy">
+          <p>FITME PERFORMANCE</p>
+          <h1>Solmie 機能束胸</h1>
+        </div>
+
+        <div class="model-panel model-panel-primary" aria-label="3D 商品展示">
+          <div class="model-copy">
+            <p>3D PRODUCT VIEW</p>
+            <strong>拖曳旋轉，雙指或滾輪縮放</strong>
+          </div>
+          <model-viewer
+            id="fitmeModel"
+            class="fitme-model"
+            src="./assets/models/fitme.glb"
+            alt="FITME Solmie 機能束胸 3D 模型"
+            camera-controls
+            touch-action="pan-y"
+            interaction-prompt="none"
+            shadow-intensity="0.35"
+            shadow-softness="0.8"
+            exposure="1"
+            camera-orbit="0deg 72deg 2.8m"
+            camera-target="0m 0m 0m"
+            min-camera-orbit="auto auto 1.8m"
+            max-camera-orbit="auto auto 4.5m"
+            field-of-view="32deg"
+            environment-image="neutral"
+            tone-mapping="commerce"
+            ar-status="not-presenting"
+          ></model-viewer>
+        </div>
+      </section>
+
+      <section class="product-info" aria-label="商品選項">
+        <div>
+          <p class="eyebrow">SOUL FIRST. STYLE FOLLOWS.</p>
+          <h2>FITME 機能束胸</h2>
+          <p class="price">NT$1,650</p>
+          <p class="intro">
+            俐落上胸小標、霧面壓縮布料與平整下圍，為舞蹈與日常活動設計。
+          </p>
+        </div>
+
+        <div class="selector-group">
+          <div class="selector-head">
+            <span>顏色</span>
+            <strong id="colorName">霧面黑</strong>
+          </div>
+          <div class="swatches" role="group" aria-label="選擇束胸顏色">
+            <button class="swatch is-active" data-color="black" aria-label="霧面黑">
+              <span class="swatch-chip black"></span>
+            </button>
+            <button class="swatch" data-color="white" aria-label="經典白">
+              <span class="swatch-chip white"></span>
+            </button>
+            <button class="swatch" data-color="coffee" aria-label="柔咖色">
+              <span class="swatch-chip coffee"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="selector-group">
+          <div class="selector-head">
+            <span>Logo 款式</span>
+            <strong id="logoName">圓形徽章</strong>
+          </div>
+          <div class="logo-options" role="group" aria-label="選擇 logo 款式">
+            <button class="logo-option is-active" data-logo="badge">徽章</button>
+            <button class="logo-option" data-logo="this">This is me</button>
+            <button class="logo-option" data-logo="script">Solmié</button>
+          </div>
+        </div>
+
+        <div class="details">
+          <div>
+            <span>材質感</span>
+            <strong>霧面壓縮</strong>
+          </div>
+          <div>
+            <span>標誌位置</span>
+            <strong>上胸小標</strong>
+          </div>
+          <div>
+            <span>版型</span>
+            <strong>平整下圍</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
